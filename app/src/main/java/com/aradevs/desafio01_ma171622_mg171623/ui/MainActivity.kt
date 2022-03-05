@@ -16,5 +16,14 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //do something
+
+        with(binding){
+            add.setOnClickListener {
+                viewModel.saveUser("test", "test")
+            }
+            get.setOnClickListener {
+                viewModel.getUser("test","test")
+            }
+        }
     }
 }

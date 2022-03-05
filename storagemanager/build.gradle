@@ -36,6 +36,7 @@ dependencies {
 
     //DAGGER HILT
     implementation 'com.google.dagger:hilt-android:2.40'
+    implementation project(path: ':domain')
     kapt 'com.google.dagger:hilt-compiler:2.40'
 
     //ROOM

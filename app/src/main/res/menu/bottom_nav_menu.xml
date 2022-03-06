@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/e1_fragment"
+        android:title="E1"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/e2_fragment"
+        android:title="E2"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/e3_fragment"
+        android:title="E3"
+        app:showAsAction="ifRoom" />
+</menu>

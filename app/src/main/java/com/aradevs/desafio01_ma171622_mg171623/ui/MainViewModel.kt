@@ -19,48 +19,4 @@ class MainViewModel @Inject constructor(
     private val getUserUseCase: GetUserUseCase,
     private val saveUserUseCase: SaveUserUseCase,
 ) : ViewModel() {
-    private val _fetchStatus: MutableStateFlow<Status<User?>> = MutableStateFlow(Status.Initial())
-    val fetchStatus: StateFlow<Status<User?>> get() = _fetchStatus
-
-    fun getUser(username: String, password: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            _fetchStatus.emit(Status.Loading())
-            when (val user = getUserUseCase(username, password)) {
-                is Status.Initial, is Status.Loading -> {
-                    //do nothing
-                }
-                is Status.Success -> {
-                    if(user.data == null){
-                        Timber.d("Not found and success")
-                    }
-                    Timber.d("found ${user.data?.username}")
-                    _fetchStatus.emit(user)
-                }
-                is Status.Error -> {
-                    Timber.d("Not found")
-                    _fetchStatus.emit(Status.Error(user.exception))
-                }
-            }
-        }
-    }
-
-    fun saveUser(username: String, password: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            _fetchStatus.emit(Status.Loading())
-            when (val user = saveUserUseCase(username, password)) {
-                is Status.Initial, is Status.Loading -> {
-                    //do nothing
-                }
-                is Status.Success -> {
-                    Timber.d("Saved")
-                    //_fetchStatus.emit(Status.Success(Unit))
-                }
-                is Status.Error -> {
-                    Timber.d("Not saved ${user.exception}")
-                    //_fetchStatus.emit(Status.Error(user.exception))
-                }
-            }
-        }
-    }
-
 }

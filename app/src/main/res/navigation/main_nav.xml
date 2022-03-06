@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav.xml"
+    app:startDestination="@id/login_screen">
+    <fragment
+        android:id="@+id/login_screen"
+        android:name="com.aradevs.desafio01_ma171622_mg171623.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_screen_to_bottom_nested_nav"
+            app:destination="@id/bottom_nested_nav" />
+    </fragment>
+    <navigation
+        android:id="@+id/bottom_nested_nav"
+        app:startDestination="@id/e1_fragment">
+        <fragment
+            android:id="@+id/e1_fragment"
+            android:name="com.aradevs.desafio01_ma171622_mg171623.ui.e1.E1Fragment"
+            android:label="fragment_e1"
+            tools:layout="@layout/fragment_e1" />
+        <fragment
+            android:id="@+id/e2_fragment"
+            android:name="com.aradevs.desafio01_ma171622_mg171623.ui.e2.E2Fragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_e2" />
+        <fragment
+            android:id="@+id/e3_fragment"
+            android:name="com.aradevs.desafio01_ma171622_mg171623.ui.e3.E3Fragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_e3" />
+    </navigation>
+
+</navigation>

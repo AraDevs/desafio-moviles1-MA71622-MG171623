@@ -6,4 +6,7 @@
     <string name="login">Inicia sesion</string>
     <string name="password">Contraseña</string>
     <string name="create_account">Crear cuenta</string>
+    <string name="register_account">Registrarse</string>
+    <string name="auth_error">Error de autenticacion</string>
+    <string name="unexpected_error">Error de registro  (es probable que el nombre de usuario ya este en uso)</string>
 </resources>

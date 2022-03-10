@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/primary"
+    android:background="@color/accent"
     tools:context=".ui.MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/login"
+                android:text="@string/register_account"
                 android:textAlignment="center"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -53,18 +53,13 @@
                 android:hint="@string/password"
                 android:inputType="textPassword"/>
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/login_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:cornerRadius="14dp"
-                android:text="@string/login"/>
-            <TextView
                 android:id="@+id/register_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/create_account"
-                android:textAlignment="center"/>
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/primary"
+                app:cornerRadius="14dp"
+                android:text="@string/register_account"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

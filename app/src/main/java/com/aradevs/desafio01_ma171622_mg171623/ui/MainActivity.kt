@@ -22,7 +22,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_nav_host) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.main_nav_host) as NavHostFragment
         navController = navHostFragment.navController
         navController.addOnDestinationChangedListener(this::onDestinationChanged)
         binding.bottomNav.setupWithNavController(navController)
@@ -34,15 +35,15 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         args: Bundle?,
     ) {
         when (destination.id) {
-            R.id.login_screen -> binding.bottomNav.gone()
+            R.id.login_screen, R.id.register_screen -> binding.bottomNav.gone()
             else -> binding.bottomNav.visible()
         }
     }
 
     override fun onBackPressed() {
-        when(navController.currentDestination?.id){
+        when (navController.currentDestination?.id) {
             R.id.e1_fragment, R.id.e2_fragment, R.id.e3_fragment -> finish()
-            else->{
+            else -> {
                 //do nothing
             }
         }

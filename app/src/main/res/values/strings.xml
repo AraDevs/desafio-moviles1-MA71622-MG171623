@@ -6,6 +6,17 @@
     <string name="login">Inicia sesion</string>
     <string name="password">Contraseña</string>
     <string name="create_account">Crear cuenta</string>
+    <string name="register_account">Registrarse</string>
+    <string name="auth_error">Error de autenticacion</string>
+    <string name="unexpected_error">Error de registro  (es probable que el nombre de usuario ya este en uso)</string>
+    <string name="e1_title">Ejercicio 1</string>
+    <string name="a_value">a</string>
+    <string name="b_value">b</string>
+    <string name="calculate">Calcular</string>
+    <string name="c_value">c</string>
+    <string name="e2_title">Ejercicio 2</string>
+    <string name="enter_candidates">Ingrese candidatos</string>
+    <string name="e3_title">Ejercicio 3</string>
     <string name="first_employee">Primer empleado</string>
     <string name="names">Nombres</string>
     <string name="lastnames">Apellidos</string>

@@ -1,10 +1,9 @@
-package com.aradevs.desafio01_ma171622_mg171623.ui.login.view_models
+package com.aradevs.desafio01_ma171622_mg171623.ui.register.view_models
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.aradevs.domain.Status
 import com.aradevs.domain.User
-import com.aradevs.storagemanager.use_cases.GetUserUseCase
 import com.aradevs.storagemanager.use_cases.SaveUserUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -15,29 +14,21 @@ import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
-class LoginViewModel @Inject constructor(
-    private val getUserUseCase: GetUserUseCase,
-    private val saveUserUseCase: SaveUserUseCase,
-) : ViewModel() {
-    private val _fetchStatus: MutableStateFlow<Status<User?>> = MutableStateFlow(Status.Initial())
-    val fetchStatus: StateFlow<Status<User?>> get() = _fetchStatus
+class RegisterViewModel @Inject constructor(private val saveUserUseCase: SaveUserUseCase) : ViewModel() {
+    private val _fetchStatus: MutableStateFlow<Status<Unit>> = MutableStateFlow(Status.Initial())
+    val fetchStatus: StateFlow<Status<Unit>> get() = _fetchStatus
 
-    fun getUser(username: String, password: String) {
+    fun saveUser(username: String, password: String) {
         viewModelScope.launch(Dispatchers.IO) {
             _fetchStatus.emit(Status.Loading())
-            when (val user = getUserUseCase(username, password)) {
+            when (val user = saveUserUseCase(username, password)) {
                 is Status.Initial, is Status.Loading -> {
                     //do nothing
                 }
                 is Status.Success -> {
-                    if(user.data == null){
-                        Timber.d("Not found and success")
-                    }
-                    Timber.d("found ${user.data?.username}")
                     _fetchStatus.emit(user)
                 }
                 is Status.Error -> {
-                    Timber.d("Not found")
                     _fetchStatus.emit(Status.Error(user.exception))
                 }
             }

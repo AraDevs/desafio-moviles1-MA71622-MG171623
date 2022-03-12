@@ -33,8 +33,6 @@ K
 storagemanager/build.gradle,8\a\8aba7b783680103d9af80f382cb4e78a79cdbda6
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
-Å
-Qstoragemanager/src/main/java/com/aradevs/storagemanager/modules/UseCasesModule.kt,c\f\cfccc48911d9520d6a1c135c2a34481ac82f08a5
 s
 Cstoragemanager/src/main/java/com/aradevs/storagemanager/Entities.kt,c\0\c045f2b2202aad149de29496640355ad6235b518
 |

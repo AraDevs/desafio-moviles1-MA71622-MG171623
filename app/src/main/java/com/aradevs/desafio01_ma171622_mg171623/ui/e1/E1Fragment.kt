@@ -7,9 +7,7 @@ import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.aradevs.desafio01_ma171622_mg171623.R
 import com.aradevs.desafio01_ma171622_mg171623.databinding.FragmentE1Binding
-import twoDecimals
-import java.math.BigDecimal
-import java.math.RoundingMode
+import com.aradevs.desafio01_ma171622_mg171623.ui.utils.twoDecimals
 import kotlin.math.pow
 import kotlin.math.sqrt
 

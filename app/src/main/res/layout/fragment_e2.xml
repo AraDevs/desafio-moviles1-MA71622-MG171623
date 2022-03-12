@@ -40,7 +40,7 @@
                 android:importantForAutofill="no"
                 android:paddingHorizontal="10dp"
                 android:hint="@string/enter_candidates"
-                android:inputType="numberDecimal"/>
+                android:inputType="text"/>
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/calc_button"
                 android:layout_width="match_parent"

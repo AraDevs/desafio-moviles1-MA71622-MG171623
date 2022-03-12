@@ -40,7 +40,7 @@
                 android:importantForAutofill="no"
                 android:paddingHorizontal="10dp"
                 android:hint="@string/a_value"
-                android:inputType="numberDecimal"/>
+                android:inputType="numberSigned|numberDecimal"/>
             <EditText
                 android:id="@+id/b_value"
                 android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                 android:importantForAutofill="no"
                 android:paddingHorizontal="10dp"
                 android:hint="@string/b_value"
-                android:inputType="numberDecimal" />
+                android:inputType="numberSigned|numberDecimal" />
             <EditText
                 android:id="@+id/c_value"
                 android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                 android:importantForAutofill="no"
                 android:paddingHorizontal="10dp"
                 android:hint="@string/c_value"
-                android:inputType="numberDecimal" />
+                android:inputType="numberSigned|numberDecimal" />
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/calc_button"
                 android:layout_width="match_parent"

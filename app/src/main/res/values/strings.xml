@@ -6,4 +6,23 @@
     <string name="login">Inicia sesion</string>
     <string name="password">Contraseña</string>
     <string name="create_account">Crear cuenta</string>
+    <string name="first_employee">Primer empleado</string>
+    <string name="names">Nombres</string>
+    <string name="lastnames">Apellidos</string>
+    <string name="salary">Salario</string>
+    <string name="position">Cargo</string>
+    <string name="second_employee">Segundo empleado</string>
+    <string name="third_employee">Tercer empleado</string>
+    <string name="calc_salary">Calcular salario</string>
+    <string name="ok">Aceptar</string>
+    <string name="employee">Empleado: %1$s</string>
+    <string name="isss">ISSS: %1$s</string>
+    <string name="afp">AFP: %1$s</string>
+    <string name="rent">Renta: %1$s</string>
+    <string name="liquid">Sueldo líquido: %1$s</string>
+    <string name="bonus">Bono: %1$s</string>
+    <string name="max">Empleado con mayor sueldo: %1$s</string>
+    <string name="min">Empleado con menor sueldo: %1$s</string>
+    <string name="over300">Empleados con sueldo sobre $300: %1$d</string>
+    <string name="hours">Horas trabajadas</string>
 </resources>

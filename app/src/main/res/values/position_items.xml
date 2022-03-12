@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="position_items">
+        <item>Gerente</item>
+        <item>Asistente</item>
+        <item>Secretaria</item>
+        <item>Otro</item>
+    </string-array>
+</resources>
